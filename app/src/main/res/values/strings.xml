@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MaterialDesign</string>
+    <string name="backUp">backUp</string>
+    <string name="delete">delete</string>
+    <string name="setting">setting</string>
+    <string name="call">Call</string>
+    <string name="friends">friends</string>
+    <string name="location">location</string>
+    <string name="task">task</string>
+    <string name="mail">ZMJ@gmail.com</string>
+</resources>
