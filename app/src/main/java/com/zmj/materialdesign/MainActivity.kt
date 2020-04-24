@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.zmj.materialdesign.common.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu1)
         }
         initNavigationView()
+        initFloatingActionBtn()
     }
 
     private fun initNavigationView(){
@@ -36,6 +40,16 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    private fun initFloatingActionBtn(){
+        fab.setOnClickListener {
+            Snackbar.make(it,"You have delete data",Snackbar.LENGTH_LONG)
+                .setAction("undo"
+                ) { Toast.makeText(this,"Data restored",Toast.LENGTH_SHORT).show() }
+                .show()
+        }
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu,menu)
