@@ -56,7 +56,14 @@ class MainActivity : AppCompatActivity() {
         val fruits: ArrayList<Fruit> = ArrayList()
         initFruitData(fruits)
         rv_view.layoutManager = GridLayoutManager(this,2)
-        rv_view.adapter = FruitAdapter(this,fruits)
+        val fruitAdapter = FruitAdapter(this,fruits)
+        rv_view.adapter = fruitAdapter
+
+        fruitAdapter.setOnItemClickListener(object :FruitAdapter.OnFruitItemClick{
+            override fun onItemClick(fruit: Fruit) {
+                FruitActivity.launch(this@MainActivity,fruit)
+            }
+        })
     }
 
     private fun initSwipeRefreshLayout(){
