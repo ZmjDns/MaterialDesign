@@ -9,4 +9,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--针对5.0以下设置状态栏透样式-->
+    <style name="FruitActivityTheme" parent="AppTheme">
+    </style>
+
 </resources>
