@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.zmj.materialdesign.R
+import com.zmj.materialdesign.common.showToast
 import com.zmj.materialdesign.entry.Fruit
 import kotlinx.android.synthetic.main.activity_fruit.*
 
@@ -16,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_fruit.*
  * Time : 2020/4/24
  * Description :
  */
-class FruitActivity:AppCompatActivity() {
+class FruitActivity:BaseActivity() {
 
     private var fruit: Fruit? = null
 
@@ -45,6 +46,10 @@ class FruitActivity:AppCompatActivity() {
             fruit_image.setImageDrawable(resources.getDrawable(fruit!!.imageId))
         }
         fruit_content_text.text = initFruit(fruit!!.name)
+
+        floatingActionButton.setOnClickListener {
+            showToast(this,"您点击了评论")
+        }
     }
 
     private fun initFruit(name: String): CharSequence? {
