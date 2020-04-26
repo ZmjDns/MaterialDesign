@@ -73,7 +73,7 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16sp"
+        android:layout_margin="16dp"
         android:src="@drawable/commit"
         app:layout_anchor="@id/appBar"
         app:layout_anchorGravity="bottom|end"/>
