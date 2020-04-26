@@ -41,7 +41,8 @@ class FruitActivity:AppCompatActivity() {
 
         collapsing_toolbar.title = fruit?.name
         if (fruit?.imageId != null){
-            fruit_image.setImageDrawable(getDrawable(fruit!!.imageId))
+            //fruit_image.setImageDrawable(getDrawable(fruit!!.imageId))
+            fruit_image.setImageDrawable(resources.getDrawable(fruit!!.imageId))
         }
         fruit_content_text.text = initFruit(fruit!!.name)
     }

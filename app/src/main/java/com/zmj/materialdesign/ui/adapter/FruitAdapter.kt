@@ -32,7 +32,8 @@ class FruitAdapter(var context: Context,var fruits: List<Fruit>): RecyclerView.A
 
     override fun onBindViewHolder(holder: FruitHolder, position: Int) {
         val fruit = fruits[position]
-        holder.fruitImg.setImageDrawable(context.getDrawable(fruit.imageId))
+        //holder.fruitImg.setImageDrawable(context.getDrawable(fruit.imageId))
+        holder.fruitImg.setImageDrawable(context.resources.getDrawable(fruit.imageId))
         holder.fruitName.text = fruit.name
 
         holder.cardView.setOnClickListener {
